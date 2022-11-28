@@ -7,10 +7,7 @@ import MVoteControlPage from './ViewContestant/male_contestant/M_voteControlPage
 import MFormPagesControl from './registerContestant/male_contestant/M_FormPagesControl';
 import { MRegFormProvider } from './registerContestant/male_contestant/M_RegisterContext';
 import {MDetailsProvider} from './ViewContestant/male_contestant/M_VoteDetailsContext'
-import  {Hello} from './App.js'
-
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios';
-import {Container, Row, Col} from 'react-bootstrap'
+import { Row, Col} from 'react-bootstrap'
 import ViewMaleDetails from './M_ViewMaleDetails'
 
 

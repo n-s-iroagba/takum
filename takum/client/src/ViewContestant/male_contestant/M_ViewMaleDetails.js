@@ -1,9 +1,10 @@
 
-import React, { useEffect, useState } from 'react'
-import {Card, Button, Container, Row, Col} from 'react-bootstrap'
+import React, { useContext, useEffect, useState } from 'react'
+import {Card, Button, Row, Col} from 'react-bootstrap'
+import { MVoteDetailsContext } from './M_VoteDetailsContext'
 
 const MaleDetails = ({props,setPage}) => { 
-
+        const {setVoteId,setVoteFirstName,setVoteLastName} = useContext(MVoteDetailsContext)
     const [id, setId] = useState('')
     const [firstName, setFirstName] = useState(0)
     const [lastName, setLastName] = useState('')
@@ -17,11 +18,13 @@ const MaleDetails = ({props,setPage}) => {
             setLastName(props.lastName)
             setVotes(props.votes)
             setImage(props.image)
-
     },[props])
 
 
   const vote = () => {
+    setVoteId(props.id)
+    setVoteLastName(props.lastName)
+    setVoteFirstName(props.firstName)
     setPage();
   }
     return(<>
@@ -36,7 +39,7 @@ const MaleDetails = ({props,setPage}) => {
                                 {votes} votes
                             </Card.Text>
                         <br />
-                            <Button className="btn btn-primary m-2"onClick={setPage}>vote</Button> 
+                            <Button className="btn btn-primary m-2"onClick={vote}>vote</Button> 
                         
                     </Card.Body>        
                 </Card>
