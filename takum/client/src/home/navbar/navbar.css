@@ -1,0 +1,21 @@
+.navbar {
+    position:absolute;
+    top: 2px;
+    z-index:10;
+    background:transparent;
+    width:100%;
+    margin-left: auto;
+}
+.nav-item{
+    border-left: 1px solid white;
+}
+.container{
+    
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      };
+
+
+
+

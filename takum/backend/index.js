@@ -1,5 +1,4 @@
 const express = require('express')
-req
 const sequelize = require('./models/orm_setup')
 const app = express()
 const PORT = process.env.PORT || 8080;
@@ -31,7 +30,9 @@ app.use('/',require("./routes/route")) //index route
 app.use('/',require("./routes/route"))
 app.use('/malecontestants',require("./routes/route")) //all male contestants
 app.use('/malecontestants/:id',require("./routes/route"))
+app.use('/femalecontestants',require("./routes/route")) //all male contestants
+app.use('/femalecontestants/:id',require("./routes/route"))
 
-app.listen(port, ()=>{
+app.listen(PORT, ()=>{
     console.log('takum listening on port ${port}')
 })

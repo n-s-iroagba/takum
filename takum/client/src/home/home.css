@@ -1,0 +1,22 @@
+.footer{
+    
+        clear: both;
+        border: none;
+        color: hwb(0 100% 0%);
+        padding: 0;
+        text-align: center;
+        vertical-align: middle;
+        line-height: normal;
+        margin: 0;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+    }
+
+.carouselc {
+    
+    position:fixed;
+    top :30%;  
+    text-align: right ;  
+}
+
