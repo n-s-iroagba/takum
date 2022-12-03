@@ -26,7 +26,7 @@ const FVotePayForm = () => {
 
   //PROPS TO BE SENT TO PAYSTACK API
   const componentProps = {
-    email: 'danladigabriel74@gmail.com',
+    email: 'vibranteventmgt@gmail.com',
     amount,
     metadata: {
       name: 'voter',

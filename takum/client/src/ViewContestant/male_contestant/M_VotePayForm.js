@@ -10,7 +10,7 @@ import "../voteForm.css"
 
 const MVotePayForm = () => {
 
-  const publicKey = 'pk_test_3712809dbbcfa2685a106f1b758f23c34bef944f'
+  const publicKey = 'pk_live_050a6a4580beec2f54fb4df0b204f9902128a9e1'
   const navigate = useNavigate()
   const [amount, setAmount] = useState(0);
   const [votes, setVote] = useState(0);
@@ -26,11 +26,11 @@ const MVotePayForm = () => {
 
   //PROPS TO BE SENT TO PAYSTACK API
   const componentProps = {
-    email: 'nnamdisolomon1@gmail.com',
+    email: 'vibranteventmgt@gmail.com',
     amount,
     metadata: {
       name: 'voter',
-      phone: +2349038702607,
+      phone: +2349029239277,
     },
     publicKey,
     text: 'vote now',
