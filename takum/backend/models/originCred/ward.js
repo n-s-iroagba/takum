@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 const sequelize = require("../orm_setup");
 const MaleContestant = require("../malecontestant")
-
+const FemaleContestant = require('../femalecontestant')
 Ward = sequelize.define("wards",{
     id : {
         type : Sequelize.INTEGER,
@@ -19,5 +19,9 @@ Ward.hasMany(MaleContestant,{
     onDelete : "CASCADE",
     onUpdate : "CASCADE",
 })
-
+Ward.hasMany(FemaleContestant,{
+    foreignKey : "ward_id",
+    onDelete : "CASCADE",
+    onUpdate : "CASCADE",
+})
 module.exports = Ward;

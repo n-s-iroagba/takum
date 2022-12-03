@@ -1,10 +1,10 @@
 const Sequelize = require("sequelize");
 
 
-const sequelize = new Sequelize("testtakum", "root", "97chocho",{
-    dialect : "mysql",
-    host: "localhost",
-    port:3306,
+const sequelize = new Sequelize("takumdb", "nnamdi", "97chocho",{
+    dialect : "postgres",
+    host: 'postgresql-98535-0.cloudclusters.net',
+    port:13750 ,
 });
 
 module.exports = sequelize;
@@ -18,4 +18,3 @@ const lgaOfOrigin = require("./originCred/lgaofOrigin");
 const ward = require("./originCred/ward");
 const MaleContestant = require("./malecontestant")
 const FemaleContestant = require("./malecontestant")
-

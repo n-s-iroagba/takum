@@ -1,6 +1,6 @@
 //used context to share state of form field across multiple form pages
 import React from "react";
-import { createContext,useState} from "react";
+import {createContext,useState} from "react";
 
 export const MRegFormContext = createContext();
 
@@ -8,8 +8,7 @@ export const MRegFormContext = createContext();
 export const MRegFormProvider = ({children}) => {
     
     const formData ={
-
-        firstName : null,
+      firstName : null,
         lastName : null,
         middleName : 'NONE',
         dateOfBirth : null,
@@ -55,55 +54,11 @@ export const MRegFormProvider = ({children}) => {
         }
     
 
-    const submit = (e) => {
-        e.preventDefault()
-        let x = 0;
-
-        for (const key in state){
-            if (state[key] === null){
-            x +=1;
-            };
-        } 
-
-        for (const key in file){
-            if (file[key] === null){
-            x +=1;
-            };
-        } 
-
-        if (x > 0){
-            alert('some fields are empty or incorrect please go back and check');
-           
-        }
-        else
-        { 
-            let submitData = new FormData();
-            for (const key in state){
-                submitData.append(key, state[key])
-            }
-            for (const key in file){
-                submitData.append(key, file[key])
-            }
-            console.log(submitData)
-
-
-            fetch("http://localhost:8080/malecontestants",{
-                method: 'POST',
-                body: submitData,
-                })
-                .then((response) => response.json())
-                .then((data) => {
-                     console.log('Success:', data);
-               })
-                .catch((error) => {
-                         console.error('Error:', error);
-             })
-            }
-    }
+    
 
     return (
             <MRegFormContext.Provider
-              value ={{submit,state,handleFile,handleOnChange}}
+              value ={{file,state,handleFile,handleOnChange}}
             >{children}</MRegFormContext.Provider>
     );
     

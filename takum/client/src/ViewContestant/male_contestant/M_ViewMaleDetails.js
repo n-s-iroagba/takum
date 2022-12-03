@@ -2,14 +2,15 @@
 import React, { useContext, useEffect, useState } from 'react'
 import {Card, Button, Row, Col} from 'react-bootstrap'
 import { MVoteDetailsContext } from './M_VoteDetailsContext'
+import '../contestant.css'
 
 const MaleDetails = ({props,setPage}) => { 
-        const {setVoteId,setVoteFirstName,setVoteLastName} = useContext(MVoteDetailsContext)
-    const [id, setId] = useState('')
-    const [firstName, setFirstName] = useState(0)
-    const [lastName, setLastName] = useState('')
-    const [votes, setVotes] = useState(true)
-    const [image, setImage] = useState('')
+    const {setVoteId,setVoteFirstName,setVoteLastName} = useContext(MVoteDetailsContext)
+    const [id, setId] = useState(0);
+    const [firstName, setFirstName] = useState(' ')
+    const [lastName, setLastName] = useState(' ')
+    const [votes, setVotes] = useState(0)
+    const [image, setImage] = useState(' ')
 
 
     useEffect(() => {
@@ -28,23 +29,24 @@ const MaleDetails = ({props,setPage}) => {
     setPage();
   }
     return(<>
+       
         <Row>
-            <Col md={8} lg={8} sm={8}>
+            <Col>
                 <Card className='shadow-lg m-3 p-2 rounded'>
-                        <Card.Img src={`http://localhost:8080/${image}`}/>
+                        <Card.Img className='img' src={`https://takum.fly.dev/${image}`}/>
                         <Card.Body>
-                            <Card.Title className='text-left text-dark'>Contestant:{id}</Card.Title>
-                            <Card.Title className="text-success text-center">{firstName} {lastName}</Card.Title>
-                            <Card.Text>
+                            <Card.Title className='text-dark'>Contestant:{id}</Card.Title>
+                            <Card.Title className="text-success">{firstName.toUpperCase()} {lastName.toUpperCase()}</Card.Title>
+                            <Card.Title>
                                 {votes} votes
-                            </Card.Text>
-                        <br />
+                            </Card.Title>
                             <Button className="btn btn-primary m-2"onClick={vote}>vote</Button> 
                         
                     </Card.Body>        
                 </Card>
             </Col>
             </Row>
+           
     
 
        

@@ -4,6 +4,8 @@ const sequelize = require("../orm_setup");
 
 const MaleContestant = require("../malecontestant")
 
+const FemaleContestant = require('../femalecontestant')
+
 Address = sequelize.define("address", {
     id : {
         type : Sequelize.INTEGER,
@@ -18,6 +20,12 @@ Address = sequelize.define("address", {
     },   
 });
 Address.hasMany(MaleContestant,{
+    foreignKey : "address_id",
+    onDelete : "CASCADE",
+    onUpdate : "CASCADE",
+})
+
+Address.hasMany(FemaleContestant,{
     foreignKey : "address_id",
     onDelete : "CASCADE",
     onUpdate : "CASCADE",

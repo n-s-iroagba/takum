@@ -27,8 +27,8 @@ module.exports = {
 
   votemale: async (req, res) => {
     const id = req.params.id
-    await Contestant.increment('votes',{
-      by : 2,
+    await MaleContestant.increment('votes',{
+      by : req.body.voteNumber,
       where :{
           id:id
       }
@@ -37,7 +37,9 @@ module.exports = {
 
   getMaleContestants : async (req, res) => {
     try{
-    maleContestants = await MaleContestant.findAll()
+    const maleContestants = await MaleContestant.findAll({
+      order : ['id']
+    })
     if (maleContestants){
       res.json(maleContestants)
       console.log(maleContestants)
@@ -150,7 +152,7 @@ module.exports = {
 
     const [contestant, isContestantCreated] = await MaleContestant.findOrCreate({
       where: {...data,},
-    });console.log(contestant.image)} 
+    })} 
     catch(error){console.log(error)}
   },
 };

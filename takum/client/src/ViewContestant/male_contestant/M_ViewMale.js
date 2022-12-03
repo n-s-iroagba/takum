@@ -1,26 +1,30 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios';
-import { Row, Col} from 'react-bootstrap'
+import { Row, Col, Button} from 'react-bootstrap'
 import ViewMaleDetails from './M_ViewMaleDetails'
-
+import { useNavigate } from 'react-router-dom';
+import '../contestant.css'
 
 const ViewMale = ({setPage}) => {
 
     const [contestants, setContestants] = useState([])
     const [loading,setLoading] = useState(true)
-    
+    const navigate = useNavigate()
    
     useEffect(() => {
-        
-   
+
         const getProductsData = async () => {
-            const { data } = await axios.get('http://localhost:8080/malecontestants')
+            const { data } = await axios.get('https://takum.fly.dev/malecontestants')
             console.log(data)
             setContestants(data)
             setLoading(false)
         }
         getProductsData()
     }, [])
+
+     const home = () => {
+        navigate('/')
+     }
      
 
     return (
@@ -37,6 +41,8 @@ const ViewMale = ({setPage}) => {
                         })
                     }
                </Row>
+               <br/>
+               <Button className='btn btn-success' onClick ={home}>HOME</Button>
 
 
            

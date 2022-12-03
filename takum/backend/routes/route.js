@@ -1,4 +1,5 @@
 //import controllers module
+
 const maleContestantController = require('../controllers/maleContestantController')
 const femaleContestantController = require('../controllers/femaleContestantController')
 
@@ -10,10 +11,7 @@ express = require('express')
 router = express.Router()
 
 
-
 //use router to handle different routes using already set controllers
-
-
 
 router.get("/", maleContestantController.index) //index router
 
@@ -26,16 +24,15 @@ router.patch("/femalecontestants/:id", femaleContestantController.votefemale)
 router.post("/malecontestants", maleContestantController.upload, maleContestantController.maleRegister)
 router.post("/femalecontestants", femaleContestantController.upload, femaleContestantController.femaleRegister)
 
-router.post("/adminLogin",adminController.login)
-
-
-//router.patch("/contestants/:id", controller.approve) // approve contestant
+router.patch("/adminlogin",adminController.login)
 
 router.delete("/malecontestants/:id", maleContestantController.deleteOneMale)// delete one contestant at a time(in case of disqualification)
 router.delete("/femalecontestants/:id", femaleContestantController.deleteOneFemale)
 
-router.delete("/malecontestants",maleContestantController.deleteAllMale)
-router.delete("/femalecontestants",femaleContestantController.deleteAllFemale)
+//router.patch("/contestants/:id", controller.approve) // approve contestant
+
+//router.delete("/malecontestants",maleContestantController.deleteAllMale)
+//router.delete("/femalecontestants",femaleContestantController.deleteAllFemale)
 
 //router.post("/sponsors", controller.registerSponsor) //register sponsor
 

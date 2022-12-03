@@ -4,22 +4,25 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import {MRegFormContext} from "./M_RegisterContext"
 import { useContext } from "react";
-import Row from "react-bootstrap/esm/Row";
 import "../register.css";
+import { useNavigate } from "react-router-dom";
 
 //using the context defined in ./context to manage form state
 
 const   MFirstForm = ({addPage,validated}) => {
 
   const {state,handleOnChange} = useContext(MRegFormContext)
+  const navigate = useNavigate()
   
 
   return (
     <div className='background'>
-    <h2 className="text-center text-light">Become the Next Mr.Takum, The Crown Awaits You...</h2>
+    <h2 className="text-center text-light">Admin Registeration, Mr.Takum</h2>
     &nbsp;
     <Form className="form col-sm-xx" noValidate validated={validated} onSubmit={addPage}>
       <Form.Group
+        as = {Col}
+        md = '10'
         controlId = 'validationCustom01'
       >
         <Form.Label className="text-light">First name</Form.Label>
@@ -36,6 +39,8 @@ const   MFirstForm = ({addPage,validated}) => {
 
       <Form.Group  
         className = "" 
+        as = {Col}
+        md = '10'
         controlId = 'validCustom01'
         >
         <Form.Label className="text-light">Last name</Form.Label>
@@ -52,6 +57,8 @@ const   MFirstForm = ({addPage,validated}) => {
 
       <Form.Group
         className = ""
+        as = {Col}
+        md = '10'
         controlId = 'validCustom01'
       >
         <Form.Label className="text-light">Middle name</Form.Label>
@@ -65,10 +72,12 @@ const   MFirstForm = ({addPage,validated}) => {
       </Form.Group>
       &nbsp;
       
-      <Row>
+      
       <Form.Group       
       className = ""
-        controlId = 'validCustom01'
+      as = {Col}
+      md = '10'  
+      controlId = 'validCustom01'
       >
         <Form.Label className="text-light">Date Of Birth</Form.Label>
         <Form.Control
@@ -80,11 +89,9 @@ const   MFirstForm = ({addPage,validated}) => {
         />
       </Form.Group>
       &nbsp;
-
       <Form.Group
         as ={ Col}
         md = "5"
-        className = ""
         controlId = 'validCustom01'
       >
         <Form.Label className="text-light">phone Number</Form.Label>
@@ -97,11 +104,13 @@ const   MFirstForm = ({addPage,validated}) => {
       type ='tel'
       />  
      </Form.Group>
-      </Row>
+    
       &nbsp;
 
       <Form.Group 
         className="" 
+        as = {Col}
+        md = '10'
         controlId = 'validCustom01' 
        >   
         <Form.Label className="text-light">Email</Form.Label>
@@ -115,10 +124,15 @@ const   MFirstForm = ({addPage,validated}) => {
         />
       </Form.Group>
       &nbsp;
-     &nbsp;
-      <div className="btn btn-pimary">
-      <Button type="submit">next</Button>
-      </div>
+      &nbsp;
+      <Form.Group>
+    <div className="btn1">
+    <Button className="btn btn-primary" onClick={()=>navigate('/adminhome')}>Admin Home</Button>
+      &nbsp;
+      &nbsp;
+      <Button className="btn btn-primary" type="submit">next</Button>
+     </div>
+     </Form.Group>
       </Form> 
       </div>
   );

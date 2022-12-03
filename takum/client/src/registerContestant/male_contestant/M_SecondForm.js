@@ -160,12 +160,11 @@ const MSecondForm = ({subtractPage,addPage,validated}) => {
       &nbsp;
 
       
-      <div className = "btn">
-      <Button onClick = {subtractPage} type="button">back</Button>
+      <div className = "btn1">
+      <Button className = "btn" onClick = {subtractPage} type="button">back</Button>
       &nbsp;
       &nbsp;
-      &nbsp;
-      <Button onClick = {addPage} type="button">next</Button>
+      <Button className = "btn" onClick = {addPage} type="button">next</Button>
       </div>
       &nbsp;
     </Form>

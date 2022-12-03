@@ -27,8 +27,8 @@ module.exports = {
 
   votefemale: async (req, res) => {
     const id = req.params.id
-    await Contestant.increment('votes',{
-      by : 2,
+    await FemaleContestant.increment('votes',{
+      by : req.body.voteNumber,
       where :{
           id:id
       }
@@ -37,10 +37,11 @@ module.exports = {
 
   getFemaleContestants : async (req, res) => {
     try{
-    FemaleContestants = await FemaleContestant.findAll()
-    if (FemaleContestants){
-      res.json(FemaleContestants)
-      console.log(FemaleContestants)
+    const femaleContestants = await FemaleContestant.findAll({
+      order : ['id']
+    })
+    if (femaleContestants){
+      res.json(femaleContestants)
     }
   }
   catch(err){

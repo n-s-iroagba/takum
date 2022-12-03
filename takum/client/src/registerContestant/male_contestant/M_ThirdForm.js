@@ -6,24 +6,68 @@ import Form from "react-bootstrap/Form";
 import {MRegFormContext} from "./M_RegisterContext"
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+
 import '../register.css'
 
 
 
 const MThirdForm= ({subtractPage}) => {
   const navigate = useNavigate()
-  const {validated,state,handleFile,handleOnChange,submit} = useContext(MRegFormContext)
-  const goToPayment = () => navigate('/maleregistrationpayment')
+ 
+  const {file,validated,state,handleFile,handleOnChange} = useContext(MRegFormContext)
+
+  const submit = (e) => {
+    e.preventDefault()
+    let x = 0;
+
+    for (const key in state){
+        if (state[key] === null){
+        x +=1;
+        };
+    } 
+
+    for (const key in file){
+        if (file[key] === null){
+        x +=1;
+        };
+    } 
+
+    if (x > 0){
+        alert('some fields are empty or incorrect please go back and check');
+       
+    }
+    else
+    { 
+        let submitData = new FormData();
+        for (const key in state){
+            submitData.append(key, state[key])
+        }
+        for (const key in file){
+            submitData.append(key, file[key])
+        }
+        console.log(submitData)
+
+
+        fetch("https://takum.fly.dev/malecontestants",{
+            method: 'POST',
+            body: submitData,
+            })
+            
+         navigate('/adminhome')
+         console.log('done')
+        }
+}
+  
   return (
     <div className='background'>
-    <Form className="form col-sm-xx" noValidate validated = {validated} onSubmit = {goToPayment}>
+    <Form className="form col-sm-xx" noValidate validated = {validated} onSubmit = {submit}>
     <Row>
     <Form.Group 
        as = {Col} 
        md = "5" 
        controlId = "highestEducationalQualification"
       >
-      <Form.Label>Highest Educational Qualification </Form.Label>
+      <Form.Label className="text-light">Highest Educational Qualification </Form.Label>
         <Form.Control
           required
           type = "text"
@@ -44,7 +88,7 @@ const MThirdForm= ({subtractPage}) => {
        md = "5" 
        controlId = "isHealthChallenge"
       >
-      <Form.Label>Do you have any health Challenge</Form.Label>
+      <Form.Label className="text-light">Do you have any health Challenge</Form.Label>
       <Form.Control
         required
         as ="select"
@@ -65,7 +109,7 @@ const MThirdForm= ({subtractPage}) => {
        md = "10" 
        controlId = "healthChallenge"
       >
-      <Form.Label>Please State Your Health Challenge(if you have any)</Form.Label>
+      <Form.Label className="text-light">Please State Your Health Challenge(if you have any)</Form.Label>
       <Form.Control
         type = "text-area"
         placeholder = "Please type in your health challenge if your have any"
@@ -81,7 +125,7 @@ const MThirdForm= ({subtractPage}) => {
        md = "10" 
        controlId = "managerName"
       >
-      <Form.Label>Manager's Name</Form.Label>
+      <Form.Label className="text-light">Manager's Name</Form.Label>
         <Form.Control
           required
           type = "text"
@@ -98,7 +142,7 @@ const MThirdForm= ({subtractPage}) => {
        md = "10" 
        controlId = "contestReason"
       >
-      <Form.Label>Why do you wish to contest in this pageantry?</Form.Label>
+      <Form.Label className="text-light">Why do you wish to contest in this pageantry?</Form.Label>
       <Form.Control 
        className= "text-area"
        type = 'text-area' 
@@ -117,7 +161,7 @@ const MThirdForm= ({subtractPage}) => {
        md = "5" 
        controlId = "validationCu"
       >
-      <Form.Label>Role Model</Form.Label>
+      <Form.Label className="text-light">Role Model</Form.Label>
       <Form.Control 
        type = "text" 
        placeholder = "Your Role Model" 
@@ -132,7 +176,7 @@ const MThirdForm= ({subtractPage}) => {
        md = "5" 
        controlId = "hobbies"
       >
-      <Form.Label>Favourite Show</Form.Label>
+      <Form.Label className="text-light">Favourite Show</Form.Label>
       <Form.Control 
         type = "text" 
         placeholder = "Your favourite show"
@@ -149,7 +193,7 @@ const MThirdForm= ({subtractPage}) => {
        md = "10" 
        controlId = "hobbies"
       >
-      <Form.Label>Hobbies</Form.Label>
+      <Form.Label className="text-light">Hobbies</Form.Label>
       <Form.Control 
         type = "text-area" 
         placeholder = "Your hobbies"
@@ -168,7 +212,7 @@ const MThirdForm= ({subtractPage}) => {
       as = {Col}
       md = '5'
       >
-        <Form.Label>Please Upload Your Passport</Form.Label>
+        <Form.Label className="text-light">Please Upload Your Passport</Form.Label>
         <Form.Control 
         type="file"
         onChange = {handleFile}
@@ -179,7 +223,7 @@ const MThirdForm= ({subtractPage}) => {
       as = {Col}
       md = '5'
       >
-      <Form.Label>Have You been Permitted by Your Parent Or Guardian</Form.Label>
+      <Form.Label className="text-light">Have You been Permitted by Your Parent Or Guardian</Form.Label>
       <Form.Control
         name = "permission"
         required
@@ -191,21 +235,22 @@ const MThirdForm= ({subtractPage}) => {
       >
         <option >select</option>
         <option >Yes</option>
-        <option >No</option>
+        <option >No</option> 
         </Form.Control>
       </Form.Group>
       &nbsp;
       </Row>
-      </Form> 
-
-      <div className = "btn">
-      <Button onClick = {subtractPage} type="button">back</Button>
+      &nbsp;
+      <Form.Group>
+      <div className = "btn1">
+      <Button className = "btn" onClick = {subtractPage} type="button">back</Button>
       &nbsp;
       &nbsp;
       &nbsp;
-      <Button onClick={submit} type = "submit">Submit form</Button>
+      <Button className = "btn" onClick={submit} type = "submit">Submit form</Button>
     </div>
-    
+    </Form.Group>
+    </Form> 
     </div>
   );
 }

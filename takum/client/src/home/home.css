@@ -8,15 +8,29 @@
         vertical-align: middle;
         line-height: normal;
         margin: 0;
-        position: fixed;
-        bottom: 0px;
+        position:absolute;
+       margin-bottom: 0%;
         width: 100%;
     }
 
-.carouselc {
-    
-    position:fixed;
-    top :30%;  
-    text-align: right ;  
+.carous {
+    position: fixed;
+    top :45%;  
+    justify-content: center;
+    left: 30%
 }
 
+.btn1{
+  position: top;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.btn-primary{
+    
+    display: inline-block;    
+}
+.img {
+    height: auto;
+}
