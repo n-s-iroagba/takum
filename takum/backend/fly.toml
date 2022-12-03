@@ -1,4 +1,4 @@
-# fly.toml file generated for takum on 2022-12-02T20:49:37+01:00
+# fly.toml file generated for takum on 2022-12-03T13:03:31+01:00
 
 app = "takum"
 kill_signal = "SIGINT"

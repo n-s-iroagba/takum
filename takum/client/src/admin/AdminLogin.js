@@ -9,21 +9,13 @@ import axios from 'axios'
 
 
 const AdminLogin = () => {
-
+    const key = '@vibrantmanagers19'
     const [loginDetails, setLoginDetails] = useState(' ');
     const navigate = useNavigate()
 
-    const login = async () => {
+    const login = () => {
 
-        const res = await axios.patch('https://takum.fly.dev/adminlogin', {
-            login: loginDetails
-        },
-            {
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            });
-        if (res) {
+        if (loginDetails===key){
             navigate('/adminhome')
         }
         else {
