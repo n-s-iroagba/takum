@@ -6,17 +6,15 @@
 .form {
     display: block;
     margin-left: 15%;
-    
     justify-content: center;
-    
 }
 
 .btn {
     display: inline-block;
-   position:relative;
+    position: static;
     bottom: 0%;
-
 }
+
 .btn1{
     display: inline-block;
     margin-left: 35%;

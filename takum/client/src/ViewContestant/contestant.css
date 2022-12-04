@@ -4,7 +4,7 @@
 }
 @media (max-width: 800px) {
     .card {
-        height: 35vh;
+        height: 70vh;
         width : 40vw;
      } 
 }
@@ -15,9 +15,22 @@
      } 
 }
 
+@media (max-width: 801px) {
 .btn-success {
     width: 10%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+}
+@media (min-width: 801px) {
+    .btn-success {
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-top: 1px;
+        padding-left: 1px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    }
