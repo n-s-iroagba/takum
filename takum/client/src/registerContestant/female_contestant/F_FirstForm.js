@@ -126,11 +126,11 @@ const   FFirstForm = ({addPage,validated}) => {
       &nbsp;
       &nbsp;
       <Form.Group>
-    <div className="btn1">
-    <Button className="btn btn-primary" onClick={()=>navigate('/adminhome')}>Admin Home</Button>
+      <div className="btn1">
+    <Button className="btn btn-primary" type= 'submit' onClick={()=>navigate('/adminhome')}>Admin Home</Button>
       &nbsp;
-      &nbsp;
-      <Button className="btn btn-primary" type="submit">next</Button>
+       &nbsp;
+      <Button className="btn btn-primary" onClick={addPage} type="submit">next</Button>
      </div>
      </Form.Group>
       </Form> 

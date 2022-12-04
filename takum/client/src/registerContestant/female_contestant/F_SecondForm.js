@@ -159,13 +159,14 @@ const FSecondForm = ({subtractPage,addPage,validated}) => {
       </Form.Group>
       &nbsp;
 
-      
+      <Form.Group>
       <div className = "btn1">
-      <Button className = "btn" onClick = {subtractPage} type="button">back</Button>
-      &nbsp;
-      &nbsp;
-      <Button className = "btn" onClick = {addPage} type="button">next</Button>
+      
+      <Button className = "btn" onClick = {subtractPage} type="submit">back</Button>{' '}{' '}
+      <Button className = "btn" onClick = {addPage} type="submit">next</Button>
+    
       </div>
+      </Form.Group>
       &nbsp;
     </Form>
     </div>

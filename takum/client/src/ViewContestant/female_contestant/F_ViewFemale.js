@@ -1,15 +1,14 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios';
-import { Row, Col, Button} from 'react-bootstrap'
+import { Row, Col} from 'react-bootstrap'
 import ViewFemaleDetails from './F_ViewFemaleDetails'
-import { useNavigate } from 'react-router-dom';
 import '../contestant.css'
 
 const ViewFemale = ({setPage}) => {
 
     const [contestants, setContestants] = useState([])
     const [loading,setLoading] = useState(true)
-    const navigate = useNavigate()
+    
    
     useEffect(() => {
 
@@ -21,12 +20,7 @@ const ViewFemale = ({setPage}) => {
         }
         getContestants()
     }, [])
-
-     const home = () => {
-        navigate('/')
-     }
      
-
     return (
         <>
                <h1 className='text-center'>Vote Your Favourite Miss Takum Contestant</h1>
@@ -41,9 +35,7 @@ const ViewFemale = ({setPage}) => {
                         })
                     }
                </Row>
-               <br/>
-               <Button className='btn btn-success' onClick ={home}>HOME</Button>
-
+               
 
            
 

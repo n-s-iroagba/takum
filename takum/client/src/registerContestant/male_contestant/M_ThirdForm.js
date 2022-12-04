@@ -243,7 +243,7 @@ const MThirdForm= ({subtractPage}) => {
       &nbsp;
       <Form.Group>
       <div className = "btn1">
-      <Button className = "btn" onClick = {subtractPage} type="button">back</Button>
+      <Button className = "btn" onClick = {subtractPage} type="submit">back</Button>
       &nbsp;
       &nbsp;
       &nbsp;

@@ -5,24 +5,17 @@
 }
 .form {
     display: block;
-    margin-left: 15%;
+    margin-left:15%;
     justify-content: center;
 }
 
 .btn {
     display: inline-block;
-    position: static;
-    bottom: 0%;
 }
 
 .btn1{
     display: inline-block;
     margin-left: 35%;
     margin-right: 35%;
-    position: static; 
-}
-.btn2{
-    display: inline-block;
-    margin-left: 60%;
-    position: static;
+     
 }

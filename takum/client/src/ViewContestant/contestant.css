@@ -4,8 +4,8 @@
 }
 @media (max-width: 800px) {
     .card {
-        height: 70vh;
-        width : 40vw;
+        height: 70%;
+        width : 100%;
      } 
 }
 @media (min-width: 801px) {
