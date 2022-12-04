@@ -1,6 +1,6 @@
 
 import React, { useContext, useEffect, useState } from 'react'
-import {Card, Button, Row, Col} from 'react-bootstrap'
+import {Card, Button, Row} from 'react-bootstrap'
 import { FVoteDetailsContext } from './F_VoteDetailsContext'
 import '../contestant.css'
 
@@ -31,7 +31,7 @@ const FemaleDetails = ({props,setPage}) => {
     return(<>
        
         <Row>
-            <Col>
+            
                 <Card className='card shadow-sm m-3 p-2 rounded'>
                         <Card.Img className='img' src={`https://takum.fly.dev/${image}`}/>
                         <Card.Body>
@@ -44,7 +44,7 @@ const FemaleDetails = ({props,setPage}) => {
                         
                     </Card.Body>        
                 </Card>
-            </Col>
+        
             </Row>
            
     
