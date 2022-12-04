@@ -1,8 +1,9 @@
 
 import React, { useContext, useEffect, useState } from 'react'
-import {Card, Button, Row} from 'react-bootstrap'
+import {Card, Button} from 'react-bootstrap'
 import { FVoteDetailsContext } from './F_VoteDetailsContext'
 import '../contestant.css'
+import { ListGroup } from 'react-bootstrap'
 
 const FemaleDetails = ({props,setPage}) => { 
     const {setVoteId,setVoteFirstName,setVoteLastName} = useContext(FVoteDetailsContext)
@@ -30,22 +31,21 @@ const FemaleDetails = ({props,setPage}) => {
   }
     return(<>
        
-        <Row>
+        
             
                 <Card className='card shadow-sm m-3 p-2 rounded'>
                         <Card.Img className='img' src={`https://takum.fly.dev/${image}`}/>
                         <Card.Body>
                             <Card.Title className='text-dark'>Contestant:{id}</Card.Title>
-                            <Card.Title className="text-success">{firstName.toUpperCase()} {lastName.toUpperCase()}</Card.Title>
-                            <Card.Title>
-                                {votes} votes
-                            </Card.Title>
-                            <Button className="btn btn-primary m-2"onClick={vote}>vote</Button> 
-                        
-                    </Card.Body>        
-                </Card>
+                            <Card.Text className="text-success">{firstName.toUpperCase()} {lastName.toUpperCase()}</Card.Text>
+                        </Card.Body>
+                        <ListGroup className="list-group-flush">
+                        <ListGroup.Item>{votes} votes</ListGroup.Item>
+                        </ListGroup>
+                            <Button className="btn btn-primary m-2"onClick={vote}>vote</Button>    
+                        </Card>
         
-            </Row>
+            
            
     
 
