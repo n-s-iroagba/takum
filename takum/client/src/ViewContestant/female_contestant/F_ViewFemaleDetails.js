@@ -32,7 +32,7 @@ const FemaleDetails = ({props,setPage}) => {
        
         <Row>
             <Col>
-                <Card className='shadow-lg m-3 p-2 rounded'>
+                <Card className='card shadow-sm m-3 p-2 rounded'>
                         <Card.Img className='img' src={`https://takum.fly.dev/${image}`}/>
                         <Card.Body>
                             <Card.Title className='text-dark'>Contestant:{id}</Card.Title>

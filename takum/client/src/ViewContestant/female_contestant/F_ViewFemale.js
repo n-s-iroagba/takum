@@ -29,7 +29,7 @@ const ViewFemale = ({setPage}) => {
                <Row>
                     {loading? <p>TAKUM PAGEANTRY IS LOADING</p> :    
                         contestants.map(contestant => {
-                            return <Col md={6} lg={4} sm={12} key={contestant.id}>
+                            return <Col md={6} lg={4} key={contestant.id}>
                                 <ViewFemaleDetails setPage ={setPage} props={contestant} />
                             </Col>
                         })
