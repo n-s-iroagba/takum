@@ -33,16 +33,18 @@ const FemaleDetails = ({props,setPage}) => {
        
         
             
-                <Card className='card shadow-sm m-3 p-2 rounded'>
+                <Card variant="top" className='card shadow-sm m-3 p-2 rounded'>
                         <Card.Img className='img' src={`https://takum.fly.dev/${image}`}/>
                         <Card.Body>
                             <Card.Title className='text-dark'>Contestant:{id}</Card.Title>
                             <Card.Text className="text-success">{firstName.toUpperCase()} {lastName.toUpperCase()}</Card.Text>
-                        </Card.Body>
+                            </Card.Body>
                         <ListGroup className="list-group-flush">
                         <ListGroup.Item>{votes} votes</ListGroup.Item>
                         </ListGroup>
-                            <Button className="btn btn-primary m-2"onClick={vote}>vote</Button>    
+                        <Card.Body>
+                            <Button className="btn btn-primary m-2"onClick={vote}>vote</Button> 
+                            </Card.Body>   
                         </Card>
         
             

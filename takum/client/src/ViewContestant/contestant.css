@@ -2,13 +2,19 @@
     width : 100%;
     height:60%
 }
-
-@media (min-width: 801px) {
+@media (max-width: 800px) {
     .card {
-        height: 50vh;
-        width : 30vw;
+        height: 100%;
+        width : 100%;
      } 
 }
+@media (min-width: 801px) {
+    .card {
+        height: 100%;
+        width : 40%;
+     } 
+}
+
 
 @media (max-width: 801px) {
 .btn-success {
