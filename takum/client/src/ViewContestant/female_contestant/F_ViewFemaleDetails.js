@@ -33,7 +33,7 @@ const FemaleDetails = ({props,setPage}) => {
        
         
             
-                <Card style={{ width: '80vw',height:'120vh' }} variant="top" className='card shadow-sm m-3 p-2 rounded'>
+                <Card style={{ width: '90vw',height:'150vh' }} variant="top" className='card shadow-sm m-3 p-2 rounded'>
                         <Card.Img style={{ objectFit: 'scale-down', marginTop: '0%' }} className='img' src={`https://takum.fly.dev/${image}`}/>
                         <Card.Body>
                             <Card.Title className='text-dark'>Contestant:{id}</Card.Title>
