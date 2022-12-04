@@ -126,7 +126,7 @@ const   FFirstForm = ({addPage,validated}) => {
       &nbsp;
       &nbsp;
       <Form.Group>
-      <div className="btn1">
+      <div className="btn1" style={{positon:'absolute',bottom:'0%'}}>
     <Button className="btn btn-primary" type= 'submit' onClick={()=>navigate('/adminhome')}>Admin Home</Button>
       &nbsp;
        &nbsp;
