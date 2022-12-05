@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios';
-import { Row, Col} from 'react-bootstrap'
+import {Col} from 'react-bootstrap'
 import ViewMaleDetails from './M_ViewMaleDetails'
 import '../contestant.css'
 
@@ -25,7 +25,7 @@ const ViewMale = ({setPage}) => {
                <h1 className='text-center'>Vote Your Favourite Mr.Takum Contestant</h1>
                <hr />
 
-               <Row>
+               <Col>
                     {loading? <p>TAKUM PAGEANTRY IS LOADING</p> :    
                         contestants.map(contestant => {
                             return <Col md={6} lg={4} sm={12} key={contestant.id}>
@@ -33,7 +33,7 @@ const ViewMale = ({setPage}) => {
                             </Col>
                         })
                     }
-               </Row>
+               </Col>
                
 
 
