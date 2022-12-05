@@ -14,7 +14,8 @@ import '../register.css'
 const MThirdForm= ({subtractPage}) => {
   const navigate = useNavigate()
  
-  const {file,validated,state,handleFile,handleOnChange} = useContext(MRegFormContext)
+  const {file,resetForm,validated,state,handleFile,handleOnChange} = useContext(MRegFormContext)
+  
 
   const submit = (e) => {
     e.preventDefault()
@@ -53,8 +54,9 @@ const MThirdForm= ({subtractPage}) => {
             body: submitData,
             })
             
-         navigate('/adminhome')
-         console.log('done')
+            setTimeout(alert('registeration succesful'),7000)
+            resetForm()  
+            navigate('/adminhome')
         }
 }
   

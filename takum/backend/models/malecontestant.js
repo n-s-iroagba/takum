@@ -40,7 +40,7 @@ const MaleContestant = sequelize.define("malecontestants", {
     },
 
     phoneNumber : {
-        type : Sequelize.INTEGER,
+        type : Sequelize.STRING,
         allowNull : false,
     },
 
@@ -61,7 +61,7 @@ const MaleContestant = sequelize.define("malecontestants", {
     },
 
     nextOfKinPhoneNumber : {
-        type : Sequelize.INTEGER,
+        type : Sequelize.STRING,
         allowNull : false,
     },
 

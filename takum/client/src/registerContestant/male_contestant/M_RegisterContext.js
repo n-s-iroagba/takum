@@ -53,12 +53,14 @@ export const MRegFormProvider = ({children}) => {
         setFile({image:e.target.files[0]})
         }
     
-
+    const resetForm =()=>{
+        setState(formData)
+    }
     
 
     return (
             <MRegFormContext.Provider
-              value ={{file,state,handleFile,handleOnChange}}
+              value ={{file,state,resetForm,handleFile,handleOnChange}}
             >{children}</MRegFormContext.Provider>
     );
     

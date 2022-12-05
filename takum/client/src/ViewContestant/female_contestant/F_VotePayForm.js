@@ -23,6 +23,25 @@ const FVotePayForm = () => {
     setVote(0);
     setAmount(0);
   };
+  const castVote = () =>{ 
+   axios.patch(`https://takum.fly.dev/femalecontestants/${voteId}`, {
+        voteNumber: votes
+      },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Credentials': true,
+            'Access-Control-Allow-Headers': 'Authorization'
+          }
+        })
+    setTimeout(alert(
+      `Your vote casting was successful! Transaction reference`
+    ),5000) 
+    resetForm()
+    navigate('/')
+    
+  }
 
   //PROPS TO BE SENT TO PAYSTACK API
   const componentProps = {
@@ -34,25 +53,7 @@ const FVotePayForm = () => {
     },
     publicKey,
     text: 'vote now',
-    onSuccess: ({ reference }) => {
-      
-       axios.patch(`https://takum.fly.dev/femalecontestants/${voteId}`, {
-        voteNumber: votes
-      },
-        {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
-
-        alert(
-          `Your vote casting was successful! Transaction reference: ${reference}`
-        );
-      
-      navigate('/');
-
-      resetForm();
-    },
+    onSuccess: castVote,
     onClose: () => alert('thank you hope to see your favourite win'),
   };
 
@@ -84,6 +85,7 @@ const FVotePayForm = () => {
             <div className="checkout-field">
               <label>Amount</label>
               <input
+                readOnly={true} 
                 type="number"
                 value={amount / 100}
               />

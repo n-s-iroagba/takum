@@ -1,15 +1,14 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios';
-import { Row, Col, Button} from 'react-bootstrap'
+import { Row, Col} from 'react-bootstrap'
 import AdminViewMaleDetails from './M_ViewMaleDetails'
-import { useNavigate } from 'react-router-dom';
 import '../contestant.css'
 
 const AdminViewMale = ({setPage}) => {
 
     const [contestants, setContestants] = useState([])
     const [loading,setLoading] = useState(true)
-    const navigate = useNavigate()
+   
    
     useEffect(() => {
 
@@ -22,9 +21,6 @@ const AdminViewMale = ({setPage}) => {
         getContestants()
     }, [])
 
-     const home = () => {
-        navigate('/')
-     }
      
 
     return (
@@ -42,8 +38,7 @@ const AdminViewMale = ({setPage}) => {
                     }
                </Row>
                <br/>
-               <Button className='btn btn-success' onClick ={home}>HOME</Button>
-
+               
 
            
 

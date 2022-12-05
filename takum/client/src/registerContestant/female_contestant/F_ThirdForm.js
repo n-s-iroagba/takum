@@ -14,7 +14,7 @@ import '../register.css'
 const FThirdForm= ({subtractPage}) => {
   const navigate = useNavigate()
  
-  const {file,validated,state,handleFile,handleOnChange} = useContext(FRegFormContext)
+  const {file,resetForm,validated,state,handleFile,handleOnChange} = useContext(FRegFormContext)
 
   const submit = (e) => {
     e.preventDefault()
@@ -52,9 +52,10 @@ const FThirdForm= ({subtractPage}) => {
             method: 'POST',
             body: submitData,
             })
-            
+         setTimeout(alert('registeration succesful'),7000)
+         resetForm()   
          navigate('/adminhome')
-         console.log('done')
+        
         }
 }
   
