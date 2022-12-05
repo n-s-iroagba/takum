@@ -27,7 +27,7 @@ const AdminViewFemale = ({setPage}) => {
 
     return (
         <>
-               <h1 className='text-center'>Vote Your Favourite Mr.Takum Contestant</h1>
+               <h1 className='text-center'>Vote Your Favourite Miss Takum Contestant</h1>
                <hr />
 
                <Row>
