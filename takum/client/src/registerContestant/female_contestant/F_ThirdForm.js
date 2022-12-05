@@ -50,7 +50,7 @@ const FThirdForm= ({subtractPage}) => {
 
         fetch("https://localhost:3000/femalecontestants",{
             method: 'POST',
-            body: submitData,ss
+            body: submitData,
             })
             .then((res)=>console.log(res))
             .then(()=>alert('registration succesful'))
