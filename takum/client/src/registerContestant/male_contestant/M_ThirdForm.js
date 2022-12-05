@@ -49,7 +49,7 @@ const MThirdForm= ({subtractPage}) => {
         console.log(submitData)
 
 
-        fetch("https://takum.fly.dev/malecontestants",{
+        fetch("http://localhost:8080/malecontestants",{
             method: 'POST',
             body: submitData,
             headers: {
