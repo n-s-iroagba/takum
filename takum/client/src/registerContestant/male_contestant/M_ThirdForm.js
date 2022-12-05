@@ -49,7 +49,7 @@ const MThirdForm= ({subtractPage}) => {
         console.log(submitData)
 
 
-        fetch("http://localhost:8080/malecontestants",{
+        fetch("https://takum.fly.dev/malecontestants",{
             method: 'POST',
             body: submitData,
             headers: {
@@ -59,7 +59,7 @@ const MThirdForm= ({subtractPage}) => {
             }
             })
             
-            setTimeout(alert('registration succesful'),15000)
+            setTimeout(alert('registration successful'),15000)
             resetForm()  
             navigate('/adminhome')
         }
