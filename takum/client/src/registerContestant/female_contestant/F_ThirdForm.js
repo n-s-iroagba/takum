@@ -50,12 +50,7 @@ const FThirdForm= ({subtractPage}) => {
 
         fetch("https://takum.fly.dev/femalecontestants",{
             method: 'POST',
-            body: submitData,
-            headers: {
-              'Access-Control-Allow-Origin': 'https://vibranteventmgt.online',
-              'Access-Control-Allow-Credentials': true,
-              'Access-Control-Allow-Headers': 'Authorization'
-            }
+            body: submitData,ss
             })
             
             setTimeout(alert('registration succesful'),15000)
