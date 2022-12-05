@@ -12,13 +12,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(`/images`, express.static(`images`));   
 
 
-db.sync()
+db.sync({force:true})
 .then(()=> console.log('model formed'))
 .catch(err=> console.log(err))
 
 
 app.use(function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', 'https://takum.fly.dev')
+    res.header('Access-Control-Allow-Origin', 'https://vibranteventmgt.online')
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization')
     res.header('Access-Control-Allow-Methods', 'POST, GET,DELETE,PATCH')
     next()
