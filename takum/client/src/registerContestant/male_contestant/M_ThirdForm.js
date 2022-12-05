@@ -52,11 +52,6 @@ const MThirdForm= ({subtractPage}) => {
         fetch("https://takum.fly.dev/malecontestants",{
             method: 'POST',
             body: submitData,
-            headers: {
-              'Access-Control-Allow-Origin': 'https://vibranteventmgt.online',
-              'Access-Control-Allow-Credentials': true,
-              'Access-Control-Allow-Headers': 'Authorization'
-            }
             })
             
             setTimeout(alert('registration successful'),15000)
