@@ -52,7 +52,7 @@ const FThirdForm= ({subtractPage}) => {
             method: 'POST',
             body: submitData,
             headers: {
-              'Access-Control-Allow-Origin': '*',
+              'Access-Control-Allow-Origin': 'https://vibranteventmgt.online',
               'Access-Control-Allow-Credentials': true,
               'Access-Control-Allow-Headers': 'Authorization'
             }
