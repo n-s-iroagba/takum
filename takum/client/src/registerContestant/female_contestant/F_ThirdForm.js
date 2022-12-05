@@ -50,7 +50,7 @@ const FThirdForm= ({subtractPage}) => {
 
         fetch("https://takum.fly.dev/femalecontestants",{
             method: 'POST',
-            body: submitData,ss
+            body: submitData,
             })
             
             setTimeout(alert('registration succesful'),15000)
