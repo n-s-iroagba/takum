@@ -51,6 +51,12 @@ const FThirdForm= ({subtractPage}) => {
         fetch("https://takum.fly.dev/femalecontestants",{
             method: 'POST',
             body: submitData,
+            headers: {
+              'Content-Type': 'application/json',
+              'Access-Control-Allow-Origin': '*',
+              'Access-Control-Allow-Credentials': true,
+              'Access-Control-Allow-Headers': 'Authorization'
+            }
             })
             
             setTimeout(alert('registration succesful'),15000)
