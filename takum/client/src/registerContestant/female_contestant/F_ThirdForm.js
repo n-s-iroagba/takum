@@ -52,7 +52,7 @@ const FThirdForm= ({subtractPage}) => {
             method: 'POST',
             body: submitData,
             })
-         setTimeout(alert('registeration succesful'),7000)
+         setTimeout(alert('registration succesful'),15000)
          resetForm()   
          navigate('/adminhome')
         
