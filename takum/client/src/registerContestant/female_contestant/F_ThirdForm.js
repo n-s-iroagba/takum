@@ -14,8 +14,8 @@ import '../register.css'
 const FThirdForm= ({subtractPage}) => {
   const navigate = useNavigate()
   
-  const {file,resetForm,validated,state,handleFile,handleOnChange} = useContext(MRegFormContext)
-  c
+  const {file,resetForm,validated,state,handleFile,handleOnChange} = useContext(FRegFormContext)
+  
   const submit = (e) => {
     e.preventDefault()
     let x = 0;
