@@ -151,7 +151,11 @@ module.exports = {
 
     const [contestant, isContestantCreated] = await FemaleContestant.findOrCreate({
       where: {...data,},
-    });} 
+    });
+  if (contestant){
+    return res.status(200).send(contestant)
+  }
+} 
     catch(error){console.log(error)}
   },
 };
