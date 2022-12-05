@@ -48,11 +48,12 @@ const FThirdForm= ({subtractPage}) => {
         console.log(submitData)
 
 
-        fetch("https://localhost:3000/femalecontestants",{
+        fetch("https://takum.fly.dev/femalecontestants",{
             method: 'POST',
-            body: submitData,
+            body: submitData,ss
             })
-            setTimeout(alert('registration successful'),15000)
+            
+            setTimeout(alert('registration succesful'),15000)
             resetForm()  
             navigate('/adminhome')
         }
