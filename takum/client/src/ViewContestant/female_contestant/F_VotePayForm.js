@@ -11,7 +11,7 @@ import "../voteForm.css"
 
 const FVotePayForm = () => {
 
-  const publicKey = 'pk_live_a532f58e90ea838f9b228dc2273bd726873e89c4'
+  const publicKey = 'pk_test_3712809dbbcfa2685a106f1b758f23c34bef944f'
   const navigate = useNavigate()
   const [amount, setAmount] = useState(0);
   const [votes, setVote] = useState(0);

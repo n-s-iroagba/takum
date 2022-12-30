@@ -1,12 +1,12 @@
 
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card, Button } from 'react-bootstrap'
-import { FVoteDetailsContext } from './F_VoteDetailsContext'
+//import { FVoteDetailsContext } from './F_VoteDetailsContext'
 import '../contestant.css'
 
 
 const FemaleDetails = ({ props, setPage }) => {
-    const { setVoteId, setVoteFirstName, setVoteLastName } = useContext(FVoteDetailsContext)
+    //const { setVoteId, setVoteFirstName, setVoteLastName } = useContext(FVoteDetailsContext)
     const [id, setId] = useState(0);
     const [firstName, setFirstName] = useState(' ')
     const [lastName, setLastName] = useState(' ')
@@ -24,10 +24,11 @@ const FemaleDetails = ({ props, setPage }) => {
 
 
     const vote = () => {
-        setVoteId(props.id)
+        alert('voting has ended')
+        /*setVoteId(props.id)
         setVoteLastName(props.lastName)
         setVoteFirstName(props.firstName)
-        setPage();
+        setPage();*/
     }
     return (<>
         <Card style={{ width: '80vw', height: '80vh' }} variant="top" className='card shadow-sm m-3 p-2 rounded'>
