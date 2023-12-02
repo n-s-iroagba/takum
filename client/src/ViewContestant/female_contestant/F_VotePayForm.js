@@ -20,10 +20,10 @@ const FVotePayForm = () => {
     setAmount(0);
   };
 
-  const castVote = async () => {
+  const castVote = () => {
   
       alert('Please be patient, this may take a short while');
-      const res = await axios.patch(`https://takum.fly.dev/femalecontestants/${voteId}`, {
+       axios.patch(`https://takum.fly.dev/femalecontestants/${voteId}`, {
         voteNumber: votes
       }, {
         headers: {

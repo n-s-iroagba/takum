@@ -58,6 +58,7 @@ const MThirdForm= ({subtractPage}) => {
             navigate('/adminhome')
             
         }
+        resetForm()
 }
   
   return (

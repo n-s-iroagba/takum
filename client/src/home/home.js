@@ -1,5 +1,4 @@
 import React from 'react';
-import Typewriter from 'typewriter-effect';
 import NavBar from './navbar/NavBar';
 import './home.css'
 import homePic1 from './pic2.jpg'

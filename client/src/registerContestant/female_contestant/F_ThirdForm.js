@@ -57,6 +57,7 @@ const FThirdForm= ({subtractPage}) => {
             localStorage.setItem('femaleState','')
             navigate('/adminhome')
         }
+        resetForm()
 }
   
   return (

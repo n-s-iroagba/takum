@@ -7,7 +7,6 @@ import MVoteControlPage from './ViewContestant/male_contestant/M_voteControlPage
 import MFormPagesControl from './registerContestant/male_contestant/M_FormPagesControl';
 import { MRegFormProvider } from './registerContestant/male_contestant/M_RegisterContext';
 import {MDetailsProvider} from './ViewContestant/male_contestant/M_VoteDetailsContext'
-import AdminHome from './admin/AdminHome';
 import FVoteControlPage from './ViewContestant/female_contestant/F_voteControlPage';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
