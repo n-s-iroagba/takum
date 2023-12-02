@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios';
-import {Col} from 'react-bootstrap'
 import ViewFemaleDetails from './F_ViewFemaleDetails'
 import '../contestant.css'
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import Card from './Card'
 import ruth from './timage/ruth.jpeg'
-import miss from './timage/misstakum.jpeg'
 const Cards = ()=>{
     const images = [ruth]
     const titles = ['Miss Takum']

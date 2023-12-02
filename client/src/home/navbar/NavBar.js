@@ -1,7 +1,7 @@
 import React from 'react'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { NavDropdown, NavItem, Dropdown, NavLink } from 'react-bootstrap';
+import { NavItem, Dropdown, NavLink } from 'react-bootstrap';
 import './navbar.css'
 import vibrantPic from './vibrant.jpg'
 import { useNavigate } from 'react-router-dom';

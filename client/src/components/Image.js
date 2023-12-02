@@ -4,7 +4,7 @@ import './components.css'
 const Image = ({image})=>{
     return(
         <div className='image-wrap'>
-        <img className='gallery-image' src={image} alt='pageantry picture'/>
+        <img className='gallery-image' src={image} alt='pageantrypicture'/>
         </div>
     )
 }

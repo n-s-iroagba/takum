@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react';
 import { Form,Col,Button } from 'react-bootstrap';
 import './components.css'
-import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 
 const LoginForm= ()=>{

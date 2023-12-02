@@ -1,5 +1,4 @@
 import React from 'react'
-import vib from './vibrant.jpg'
 import Image from './Image'
 import './components.css'
 import p1 from './takumImages/1.png'

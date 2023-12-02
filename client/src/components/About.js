@@ -5,7 +5,7 @@ const About = ()=>{
     return(
     <div className='about-wrapper'>
         <div>
-            <img  className = 'about-img' src={vibrant} alt='vibrant event picture'/>
+            <img  className = 'about-img' src={vibrant} alt='vibranteventpicture'/>
         </div>
         <div className='about-text'>
             <h1>About Us</h1>
