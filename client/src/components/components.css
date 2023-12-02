@@ -1,0 +1,163 @@
+.pageant-wrapper{
+    background: rgba(112, 4, 4, 1);
+    color: white;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    padding-top: 1cm;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: auto;
+}
+.pageant-wrapper h6{
+    width: 100%;
+    margin-top: 1cm;
+    padding-bottom: 1cm;
+}
+.pageant-wrapper img{
+    width:2.1cm;
+    height: auto;
+    margin-bottom: 0;
+    border: none;
+}
+.title{
+ height: 1cm;
+ font-size: small;
+ padding-top: 0.2cm;
+ text-align: center;
+}
+.card-wrapper{
+    height: 9cm;
+    background: rgba(112, 4, 4, 0.01);
+    width: 3.5cm;
+
+}
+.about-wrapper{
+    display: flex;
+    width:100vw;
+    background: rgba(112, 4, 4, 0.7);
+    justify-content: space-between;
+}
+.about-img{
+    padding:1cm;
+    width:30vw;
+    height: 30vw;
+}
+.about-text{
+    padding-top:1cm;
+    padding-right: 1cm;
+    color:white;
+}
+.gallery{
+    background: rgba(112, 4, 4, 0.8);
+    color:white;
+    padding:1cm;
+    text-align: center;
+}
+.image-wrap{
+    width:4.5cm;
+    overflow-y: hidden;
+
+}
+.gallery-image{
+    
+    max-width: 100%; /* Make the image fill the container horizontally */
+    height: 100%; /* Make the image fill the container vertically */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+
+}
+.gallery-images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.2cm;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    width:5.5cm;
+    padding:1cm;
+    text-align: center;
+    justify-content: space-between;
+}
+.contact-us{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+  
+    
+}
+.contact-wrapper{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background: rgba(112, 4, 4, 1);
+    text-align: center;
+    padding-top: 1cm;
+    
+    
+}
+@media only screen and (min-width: 15cm) {
+    .pageant-wrapper h6{
+       
+        
+    }
+    .gallery-image{
+        width: 6cm;
+        height: 4cm;
+        
+    }
+    
+}
+.login-wrapper{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    background: rgba(112, 4, 4, 1);
+    width:100vw;
+    height:20cm
+
+}
+.form-control{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background: 'transparent'
+}
+.vote-btns{
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+    padding-left:25vw;
+    padding-right: 25vw;
+    padding-top: 5cm;
+
+}
+.admin-btns{
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+    padding-left:10vw;
+    padding-right:10vw;
+    padding-top: 5cm;}
+.vote-wrapper{
+    background:  rgba(112, 4, 4, 1);
+    height:20cm;
+}
+.vote-btns button,.admin-btns button{
+    background-color: orange;
+    color:white;
+    height:2cm;
+    width:2.5cm;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius:10px ;
+}
+.vote-comment{
+    padding-top:3cm;
+    width:100vw;
+    text-align: center;
+    color: white;
+    font-family: cursive;
+}

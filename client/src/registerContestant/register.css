@@ -1,0 +1,20 @@
+.background{
+    background: brown;
+}
+.form {
+    display: block;
+    margin-left:15%;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+}
+
+.btn1{
+    display: inline-block;
+    margin-left: 35%;
+    margin-right: 35%;
+
+     
+}

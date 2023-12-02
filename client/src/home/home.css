@@ -1,0 +1,72 @@
+
+.carousel{
+    width:100vw;
+    height:14.5cm;
+    overflow: hidden;
+}
+.home-wrapper{
+    width:100vw;
+}
+.carousel img {
+    opacity: 0.85;
+    z-index: -1;
+}
+.carousel-item {
+    display: none;
+    position: relative;
+    transition:(.6s ease-in-out left);
+}
+.carousel-caption{
+    position: absolute;
+    top:2cm;
+    left:2.5vw;
+    right: auto;
+    
+}
+
+.carousel-caption h6{
+    position:absolute;
+    text-align: start;
+    top: 3cm;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    
+
+}
+.carousel-caption h1{
+    text-align: start;
+    font-size: xx-large;
+}
+.carousel-caption div{
+    position: absolute;
+    top:6cm;
+    display: flex;
+    justify-content: space-between;
+    width:10cm
+   
+}
+.button{
+    background-color: brown;
+    height:1cm;
+    width: 3cm;
+    border: 1px solid brown;
+}
+.vote-button{
+    background-color: rgb(165, 101, 42);
+    color: white;
+    border: 1px solid rgb(165, 101, 42);
+    height:1cm;
+    width: 3cm;
+}
+.vote-button:hover, .button:hover{
+    color: gold;
+}
+.footer{
+    background:rgba(112,4,4,0.8);
+    color: white;
+    text-align: center;
+    padding: 1cm;
+}
+@media only screen and (min-width: 10cm) {
+  
+}
