@@ -2,12 +2,15 @@ import React, {useEffect, useState} from 'react'
 import axios from 'axios';
 import ViewFemaleDetails from './F_ViewFemaleDetails'
 import '../contestant.css'
-
+import first from '../contestimage/1.jpg'
+import second from '../contestimage/2.jpg'
+import third from '../contestimage/3.jpg'
+import last from '../contestimage/4.jpg'
 const ViewFemale = ({setPage}) => {
 
     const [contestants, setContestants] = useState([])
     const [loading,setLoading] = useState(true)
-    
+    const images = [first,second,third,last]
    
     useEffect(() => {
 
@@ -27,8 +30,8 @@ const ViewFemale = ({setPage}) => {
 
                <div style={{display:'flex', flexWrap:'wrap',justifyContent:'center',alignItems:'center'}}>
                     {loading? <p>TAKUM PAGEANTRY IS LOADING....PLEASE BE PATIENT</p> :    
-                        contestants.map(contestant => {
-                            return <ViewFemaleDetails key={contestant.id} setPage ={setPage} props={contestant} />
+                        contestants.map((contestant,index)=> {
+                            return <ViewFemaleDetails key={contestant.id} setPage ={setPage} props={contestant} thepic={images[index]}/>
                            
                         })
                     }

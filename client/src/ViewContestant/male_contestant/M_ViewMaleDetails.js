@@ -4,13 +4,12 @@ import React, { useEffect, useState,useContext} from 'react'
 import { MVoteDetailsContext } from './M_VoteDetailsContext'
 import '../contestant.css'
 
-const MaleDetails = ({props,setPage}) => { 
+const MaleDetails = ({props,setPage,thepic}) => { 
         const {setVoteId,setVoteFirstName,setVoteLastName} = useContext(MVoteDetailsContext)
     const [id, setId] = useState(0);
     const [firstName, setFirstName] = useState(' ')
     const [lastName, setLastName] = useState(' ')
     const [votes, setVotes] = useState(0)
-    const [image, setImage] = useState(' ')
 
 
     useEffect(() => {
@@ -18,7 +17,6 @@ const MaleDetails = ({props,setPage}) => {
             setFirstName(props.firstName)
             setLastName(props.lastName)
             setVotes(props.votes)
-            setImage(props.image)
     },[props])
 
 
@@ -31,7 +29,7 @@ const MaleDetails = ({props,setPage}) => {
   }
     return(<>
         <div style={{ width: '5cm', height: '10cm',border:'1px solid black',textAlign:'center' }} className='div shadow-sm m-3 p-2 rounded'>
-            <img style={{ height: '5cm', width: '5cm', objectFit: 'scale-down', marginTop: '0%' }} src={`https://takum.fly.dev/${image}`} alt='contestants' />
+            <img style={{ height: '5cm', width: '5cm', objectFit: 'scale-down', marginTop: '0%' }} src={thepic} alt='contestants' />
         <div style={{display:'flex',flexDirection:'column',justifyContent:'space-between'}}>
                 <div className='text-dark'>Contestant:{id}</div>
                 <div className="text-success"style={{wordBreak:'break-all'}}>{firstName.toUpperCase()} {lastName.toUpperCase()}</div>

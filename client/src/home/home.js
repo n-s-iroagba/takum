@@ -37,7 +37,7 @@ function HomeBody({ contactRef, learnRef, scrollToTargetDiv }) {
             <Carousel.Caption>
               <h1 style={{ color: 'black' }}>Vibrant Event Management</h1>
               <h6 style={{ color: 'black' }}>Where Beauty Radiates, Elegance Elevates, and Every Moment Sparkles with Grace.</h6>
-              <div style={{ alignItems: 'start' }}>
+              <div  classname='buttons'style={{ alignItems: 'start'}}>
                 <button className='button' onClick={() => scrollToTargetDiv(contactRef)}>Contact Us</button>
                 <button className='button' onClick={() => scrollToTargetDiv(learnRef)}>Learn More</button>
                 <button className='vote-button' onClick={() => navigate('/choosevote')}>Voting Poll</button>
@@ -52,7 +52,7 @@ function HomeBody({ contactRef, learnRef, scrollToTargetDiv }) {
             <Carousel.Caption>
               <h1>Miss Takum</h1>
               <h6>Beauty,Brains and Elegance...</h6>
-              <div style={{ alignItems: 'start' }}>
+              <div classname='buttons'style={{ alignItems: 'start' }}>
                 <button className='button' onClick={() => scrollToTargetDiv(contactRef)}>Contact Us</button>
                 <button className='button' onClick={() => scrollToTargetDiv(learnRef)}>Learn More</button>
                 <button className='vote-button' onClick={() => navigate('/choosevote')}>Voting Poll</button>
@@ -66,7 +66,7 @@ function HomeBody({ contactRef, learnRef, scrollToTargetDiv }) {
             <Carousel.Caption>
               <h1>Mr. Takum</h1>
               <h6>Charisma and Confidence...</h6>
-              <div style={{ alignItems: 'start' }}>
+              <div classname='buttons'style={{ alignItems: 'start' }}>
                 <button className='button' onClick={() => scrollToTargetDiv(contactRef)}>Contact Us</button>
                 <button className='button' onClick={() => scrollToTargetDiv(learnRef)}>Learn More</button>
                 <button className='vote-button' onClick={() => navigate('/choosevote')}>Voting Poll</button>
@@ -80,7 +80,7 @@ function HomeBody({ contactRef, learnRef, scrollToTargetDiv }) {
             <Carousel.Caption>
               <h1>Vibrant Event Management</h1>
               <h6>Where Beauty Radiates, Elegance Elevates, and Every Moment Sparkles with Grace.</h6>
-              <div style={{ alignItems: 'start' }}>
+              <div classname='buttons' style={{ alignItems: 'start' }}>
                 <button className='button' onClick={() => scrollToTargetDiv(contactRef)}>Contact Us</button>
                 <button className='button' onClick={() => scrollToTargetDiv(learnRef)}>Learn More</button>
                 <button className='vote-button' onClick={() => navigate('/choosevote')}>Voting Poll</button>
