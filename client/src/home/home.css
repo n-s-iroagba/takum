@@ -42,13 +42,13 @@
     top:6cm;
     display: flex;
     justify-content: space-between;
-    width:10cm
+    width: 9cm
    
 }
 .button{
     background-color: brown;
     height:1cm;
-    width: 3cm;
+    width: 2.5cm;
     border: 1px solid brown;
 }
 .vote-button{
