@@ -37,10 +37,11 @@ const MVotePayForm = () => {
             'Access-Control-Allow-Headers': 'Authorization'
           }
         })
+    resetForm()
         setTimeout(alert(
           `Your vote casting was successful! Transaction reference`
         ),5000) 
-        resetForm()
+        
         navigate('/')
   }
 
