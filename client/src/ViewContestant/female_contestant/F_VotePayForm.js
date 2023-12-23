@@ -34,11 +34,11 @@ const FVotePayForm = () => {
         }
       });
 
-        
+      resetForm() 
       setTimeout(alert(
         `Your vote casting was successful!`
       ),5000) 
-      resetForm()
+      
       navigate('/')
       
   }
