@@ -1,11 +1,11 @@
 
-import React, { useEffect, useState,useContext } from 'react'
-import { FVoteDetailsContext } from './F_VoteDetailsContext'
+import React, { useEffect, useState} from 'react'
+//import { FVoteDetailsContext } from './F_VoteDetailsContext'
 import '../contestant.css'
 
 
 const FemaleDetails = ({ props, setPage,thepic }) => {
-    const { setVoteId, setVoteFirstName, setVoteLastName } = useContext(FVoteDetailsContext)
+    //const { setVoteId, setVoteFirstName, setVoteLastName } = useContext(FVoteDetailsContext)
     const [id, setId] = useState(0);
     const [firstName, setFirstName] = useState(' ')
     const [lastName, setLastName] = useState(' ')
@@ -24,11 +24,11 @@ const FemaleDetails = ({ props, setPage,thepic }) => {
 
 
     const vote = () => {
-        //alert('voting has ended')
-        setVoteId(props.id)
-        setVoteLastName(props.lastName)
-        setVoteFirstName(props.firstName)
-        setPage();
+        alert('voting has ended')
+        // setVoteId(props.id)
+        // setVoteLastName(props.lastName)
+        // setVoteFirstName(props.firstName)
+        // setPage();
     }
     return (<>
         <div style={{ width: '5cm', height: '10cm',border:'1px solid black',textAlign:'center' }} className='div shadow-sm m-3 p-2 rounded'>
