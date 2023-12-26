@@ -10,7 +10,7 @@ import "../voteForm.css"
 
 const MVotePayForm = () => {
 
-  const publicKey = 'pk_live_a532f58e90ea838f9b228dc2273bd726873e89c4'
+  const publicKey = 'pk_test_b1066f84dd443b957410dea538a2bc825df31445'
   const navigate = useNavigate()
   const [amount, setAmount] = useState(0);
   const [votes, setVote] = useState(0);

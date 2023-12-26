@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState,useContext} from 'react'
-
+import { useNavigate } from 'react-router-dom'
 import { MVoteDetailsContext } from './M_VoteDetailsContext'
 import '../contestant.css'
 
@@ -10,6 +10,7 @@ const MaleDetails = ({props,setPage,thepic}) => {
     const [firstName, setFirstName] = useState(' ')
     const [lastName, setLastName] = useState(' ')
     const [votes, setVotes] = useState(0)
+    const nav = useNavigate()
 
 
     useEffect(() => {
@@ -21,7 +22,8 @@ const MaleDetails = ({props,setPage,thepic}) => {
 
 
   const vote = () => {
-    //alert('voting has ended')
+    alert('voting has ended')
+    nav('/')
    setVoteId(props.id)
     setVoteLastName(props.lastName)
     setVoteFirstName(props.firstName)
