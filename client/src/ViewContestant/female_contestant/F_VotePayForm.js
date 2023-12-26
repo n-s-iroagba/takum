@@ -22,18 +22,18 @@ const FVotePayForm = () => {
 
   const castVote = () => {
   
-      alert('Please be patient, this may take a short while');
-       axios.patch(`https://takum.fly.dev/femalecontestants/${voteId}`, {
-        voteNumber: votes
-      }, {
-        headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Credentials': true,
-          'Access-Control-Allow-Headers': 'Authorization'
-        }
-      });
-
+      // alert('Please be patient, this may take a short while');
+      //  axios.patch(`https://takum.fly.dev/femalecontestants/${voteId}`, {
+      //   voteNumber: votes
+      // }, {
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //     'Access-Control-Allow-Origin': '*',
+      //     'Access-Control-Allow-Credentials': true,
+      //     'Access-Control-Allow-Headers': 'Authorization'
+      //   }
+      // });
+      alert('voting has ended for this year's pageantry')
       resetForm() 
    
       navigate('/')
