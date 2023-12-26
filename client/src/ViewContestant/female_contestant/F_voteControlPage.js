@@ -4,8 +4,8 @@ import FVotePayForm from "./F_VotePayForm";
 
 //used to control view between male contestants and votepay form
 const FVoteControlPage = () =>{
-    //const [votePage,setVotePage] = useState(false);
-//const setPage = () => setVotePage(true);
+const [votePage,setVotePage] = useState(false);
+const setPage = () => setVotePage(true);
 
     const VotePageRender = () => {
         switch (votePage){
