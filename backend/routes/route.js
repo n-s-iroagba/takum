@@ -28,6 +28,8 @@ router.post("/adminlogin",adminController.login)
 
 router.delete("/malecontestants/:id", maleContestantController.deleteOneMale)// delete one contestant at a time(in case of disqualification)
 router.delete("/femalecontestants/:id", femaleContestantController.deleteOneFemale)
+router.patch("/deletefemalevotes/:id",femaleContestantController.deleteVotes)
+router.patch("/deletemalevotes/:id",maleContestantController.deleteVotes)
 
 //router.patch("/contestants/:id", controller.approve) // approve contestant
 

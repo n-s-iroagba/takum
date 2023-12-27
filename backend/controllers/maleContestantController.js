@@ -39,6 +39,28 @@ module.exports = {
       console.log(e)
     }
   },
+  deleteVotes: async (req, res) => {
+    const id = req.params.id;
+
+    try {
+        // Assuming FemaleContestant is the model
+        const femaleContestant = await MaleContestant.findByPk(id);
+
+        if (!femaleContestant) {
+            return res.status(404).json({ error: 'Female contestant not found' });
+        }
+
+        // Decrement the votes by the specified number
+        await femaleContestant.decrement('votes', {
+            by:305,
+        });
+
+        return res.status(200).json({ success: 'Votes deleted successfully' });
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ error: 'Internal server error' });
+    }
+},
 
   getMaleContestants: async (req, res) => {
     try {
